@@ -1,16 +1,15 @@
 org		100h
 code:
-napis1 db 'A',0
-napis2 db 'g',0
+jmp start
 start:
 	mov ax, cs
 	mov ds, ax
 	
-	mov dx, napis1
+	mov dl, 'A'
 	mov ah, 02h
 	int 0x21
 	
-	mov dx, napis2
+	mov dl, 'g'
 	mov ah, 02h
 	int 0x21
 	

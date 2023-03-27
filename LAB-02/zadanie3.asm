@@ -1,17 +1,21 @@
 org 	100h
 code:
 jmp start
-imie db "Patryk Kosmider","$"
 start:
 
 mov ax, cs
 mov ds, ax
 
-mov dx, imie
-mov ah, 09h
+mov dl, 0
+mov dh, 0
+mov ah, 02h
+int 10h
+
+mov dl, 'A'
+mov ah, 02h
 int 21h
 
-mov ax, 4ch
+mov ax, 04ch
 int 21h
 
 absolute code
